@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://oronium-assigment.vercel.app/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow specific directories (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
