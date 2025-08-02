@@ -1,9 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Beyond UI Blog - Modern Blog Platform
 
-## Getting Started
+A modern, responsive blog platform built with Next.js 15 and React 19. This assignment demonstrates a full-featured blog application with dynamic content fetching, theme switching, and responsive design.
 
-First, run the development server:
+## 🌟 Features
 
+- **Modern Blog Interface**: Clean, responsive design with featured and recent posts
+- **Dynamic Content**: Fetches blog posts from external API
+- **Theme Support**: Light/dark mode toggle with system preference detection
+- **Responsive Design**: Optimized for all device sizes
+- **Featured Posts**: Hero section with featured article and sidebar
+- **Recent Posts**: Grid layout showcasing latest articles
+- **Individual Post Pages**: Detailed view for each blog post
+- **SEO Optimized**: Meta tags, Open Graph, and structured data
+- **Accessibility**: ARIA labels, skip links, and semantic HTML
+- **Performance**: Image optimization, caching, and lazy loading
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Frontend**: React 19, TypeScript
+- **Styling**: TailwindCSS 4, Radix UI components
+- **State Management**: TanStack Query (React Query)
+- **Theme**: next-themes for dark/light mode
+- **Icons**: Lucide React
+- **Deployment**: Vercel
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.17 or later
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/tejasnasre/oronium-assigment.git
+cd oronium-assigment
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -14,23 +62,83 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📱 Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Home Page**: View featured posts in the hero section and recent posts grid
+- **Individual Posts**: Click any post to view the full article
+- **Theme Toggle**: Use the theme switcher in the navigation to toggle between light and dark modes
+- **Navigation**: Browse through different sections using the top navigation bar
 
-## Learn More
+## 🔌 API Integration
 
-To learn more about Next.js, take a look at the following resources:
+The application fetches blog data from:
+- **API Endpoint**: `https://688daee0a459d5566b12e6ed.mockapi.io/api/v1/blog`
+- **Features**: Real-time data fetching with caching (5-minute stale time)
+- **Data Structure**: Posts include title, content, images, author info, and categories
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── blog/[id]/         # Dynamic blog post pages
+│   ├── layout.tsx         # Root layout with providers
+│   └── page.tsx           # Home page
+├── components/            # Reusable UI components
+│   ├── ui/               # Radix UI components
+│   ├── layout/           # Layout components (Navbar)
+│   ├── FeaturedPost.tsx  # Featured posts sidebar
+│   ├── MainCTAImage.tsx  # Hero section component
+│   └── RecentPost.tsx    # Recent posts grid
+├── hooks/                # Custom React hooks
+│   └── useBlog.ts        # Blog data fetching hooks
+├── lib/                  # Utility functions and API
+│   ├── api.ts            # API client
+│   └── utils.ts          # Helper utilities
+├── providers/            # React context providers
+├── types/                # TypeScript type definitions
+└── globals.css           # Global styles
+```
 
-## Deploy on Vercel
+## 🌐 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application is deployed on Vercel:
+- **Live URL**: [https://oronium-assigment.vercel.app](https://oronium-assigment.vercel.app)
+- **Automatic Deployments**: Connected to GitHub for continuous deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Manual Deployment
+
+```bash
+npm run build
+npm run start
+```
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build production application
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint for code quality
+
+## 📝 Assignment Requirements Fulfilled
+
+✅ Modern React/Next.js application  
+✅ Responsive design implementation  
+✅ External API integration  
+✅ State management with React Query  
+✅ TypeScript implementation  
+✅ Component-based architecture  
+✅ SEO optimization  
+✅ Accessibility features  
+✅ Performance optimization  
+✅ Dark/light theme support  
+
+## 🤝 Contributing
+
+This is an assignment project. For any questions or feedback, please refer to the project documentation.
+
+## 📄 License
+
+This project is for educational/assignment purposes.
